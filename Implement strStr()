@@ -1,0 +1,61 @@
+Given two strings needle and haystack, return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
+Input: haystack = "hello", needle = "ll"
+Output: 2
+
+
+public:
+    int strStr(string haystack, string needle) {
+        int m=needle.size();
+        int n=haystack.size();
+        
+        vector<int>lps = computeLPS(needle);
+        int i=0, j=0;
+        
+        if (!m) {
+            return 0;
+        }
+        
+        while(i<n){
+            if(needle[j] == haystack[i]){
+                i++;
+                j++;
+            }
+            if(j==m){
+                return i-j;
+                j=lps[j-1];
+            }
+            else if(i<n && needle[j]!=haystack[i]){
+                if(j!=0)
+                    j=lps[j-1];
+                else
+                    i++;
+            }
+        }  
+        return -1;
+    }
+    
+    private:
+        vector<int>computeLPS(string needle){
+            int i=1, m = needle.size();
+            int len=0;
+            vector<int> lps(m, 0);
+
+            while(i<m){
+                if(needle[i]==needle[len]){
+                    len++;
+                    lps[i]=len;
+                    i++;
+                }
+                else{
+                    if(len!=0){
+                        len=lps[len-1];
+                    }
+                    else{
+                        lps[i]=0;
+                        i++;
+                    }
+                }
+            }
+            return lps;
+        }
+};
