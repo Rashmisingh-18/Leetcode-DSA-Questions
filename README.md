@@ -5,3 +5,4 @@
 4. Implement strStr() --> Using KMP
 5. Simplify Path
 6. Happy Number
+7. Palindromic Number
