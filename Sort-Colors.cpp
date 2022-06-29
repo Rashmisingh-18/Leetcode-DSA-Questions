@@ -7,6 +7,8 @@ You must solve this problem without using the library's sort function.
 Input: nums = [2,0,2,1,1,0]
 Output: [0,0,1,1,2,2] */
 
+// Trick is to move all the O's to front and 2's to end of the array and we have find that mid which takes value 1
+
 class Solution {
 public:
     void sortColors(vector<int>& nums) {
