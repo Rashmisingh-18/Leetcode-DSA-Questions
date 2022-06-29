@@ -7,3 +7,4 @@
 6. Happy Number
 7. Palindromic Number
 8. Missing Number
+9. Sort Colors 
