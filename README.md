@@ -8,3 +8,4 @@
 7. Palindromic Number
 8. Missing Number
 9. Sort Colors 
+10. Two Sum
