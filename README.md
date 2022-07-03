@@ -14,3 +14,6 @@
 13. Subarray Sum Equals K
 14. Valid Square
 15. Permute-two-arrays-sum-every-pair-greater-equal-k (GFG Ques)
+16. Ceiling in a sorted array
+17. Floor in a sorted array
+18. Find a pair with given difference
