@@ -1,69 +1,34 @@
-#include <bits/stdc++.h>
-using namespace std;
- 
-struct node {
-  int data;
-  struct node *next;
-} *head;
- 
-void initialize(){
-    head = NULL;
-}
+// Maintaining a count of nodes, and then traversing for second time for n/2 nodes to get to the middle of the list.
 
-void insert(int num) {
-    /* Create a new Linked List node */
-    struct node* newNode = (struct node*) malloc(sizeof(struct node));
-    newNode->data  = num;
-    /* Next pointer of new node will point to head node of linked list  */
-    newNode->next = head;
-    /* make new node as new head of linked list */
-    head = newNode;
-    printf("Inserted Element : %d\n", num);
-}
- 
-void printMiddleNode(struct node *head){
-    /* Input Validation */
-    if(head == NULL){
-       cout<<"Error : Invalid Input !!!!\n";
-        return;
+class Solution {
+public:
+    ListNode* middleNode(ListNode* head) {
+        int len = 0;
+        ListNode* temp = head;
+        while(temp){
+            len++;
+            temp = temp->next;
+        }
+        temp = head;
+        for(int i=0; i< len/2; i++){
+            temp = temp->next;
+        }
+        return temp;
     }
-    struct node *slow, *fast;
-    slow = fast = head;
-    /* In every iteration, slow pointer will move one nede whereas fast pointer will move two node. When fast pointer reaches 
-     last node then slow pointer will be pointing to middle node */
-    while(fast != NULL && fast->next != NULL) {
-        fast = fast->next->next;
-        slow = slow->next;
+};
+
+
+// Hare-Tortoise-Approach
+
+class Solution {
+public:
+    ListNode* middleNode(ListNode* head) {
+        ListNode* slow = head;
+        ListNode* fast = head;
+        while(fast!= NULL && fast->next != NULL){
+            slow = slow->next;
+            fast = fast->next->next;
+        }
+        return slow;
     }
-   cout<<slow->data;
-}
- 
-/*
-Prints a linked list from head node till tail node 
-*/
-void printLinkedList(struct node *nodePtr) {
-  while (nodePtr != NULL) {
-     printf("%d", nodePtr->data);
-     nodePtr = nodePtr->next;
-     if(nodePtr != NULL)
-         printf("-->");
-  }
-}
-  
-int main() {
-    initialize();
-    /* Creating a linked List*/
-    insert(3);  
-    insert(7); 
-    insert(12); 
-    insert(5);
-    insert(9);
-    insert(19);
-     
-    cout<<"Linked List"<<endl;
-    printLinkedList(head);
-    cout<<endl; 
-    cout<<"The middle element is: ";
-    printMiddleNode(head);
-    return 0;
-}
+};
