@@ -17,6 +17,7 @@
 16. Ceiling in a sorted array
 17. Floor in a sorted array
 18. Find a pair with given difference
+19. Reverse Integer
 
   **LINKED LIST**
 1. Middle of the linked list
