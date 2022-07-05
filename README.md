@@ -17,3 +17,8 @@
 16. Ceiling in a sorted array
 17. Floor in a sorted array
 18. Find a pair with given difference
+
+  **LINKED LIST**
+1. Middle of the linked list
+2. Detect cycle in linked list
+3. Convert binary number in a linked list to integer
