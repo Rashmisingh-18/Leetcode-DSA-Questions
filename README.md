@@ -22,3 +22,5 @@
 1. Middle of the linked list
 2. Detect cycle in linked list
 3. Convert binary number in a linked list to integer
+4. Remove duplicates from sorted linked list
+5. Sort a linked list of 0s, 1s, or 2s
