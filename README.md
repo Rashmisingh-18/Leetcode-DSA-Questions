@@ -28,3 +28,4 @@
 5. Sort a linked list of 0s, 1s, or 2s
 6. Merge two sorted Linked Lists
 7. Multiply two numbers represented by linked lists
+8. Intersection of two Linked Lists
