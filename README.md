@@ -29,3 +29,4 @@
 6. Merge two sorted Linked Lists
 7. Multiply two numbers represented by linked lists
 8. Intersection of two Linked Lists
+9. Palindrome Linked Lists
