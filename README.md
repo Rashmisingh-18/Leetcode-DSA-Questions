@@ -30,3 +30,4 @@
 7. Multiply two numbers represented by linked lists
 8. Intersection of two Linked Lists
 9. Palindrome Linked Lists
+10. Reverse Linked List
