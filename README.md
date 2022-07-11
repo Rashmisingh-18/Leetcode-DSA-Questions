@@ -34,3 +34,5 @@
 11. Add Two Numbers in Linked List
 12. Add Two Numbers in Linked List - (ii)
 13. Reorder-List
+14. Delete nth node from end of linked list
+15. 
