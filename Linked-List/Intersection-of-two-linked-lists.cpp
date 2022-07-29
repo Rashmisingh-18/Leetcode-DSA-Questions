@@ -56,3 +56,43 @@ public:
 };
 
 // Time Complexity: O( m + n )      ------>     m, n : Size of linked lists
+
+// Using the count of linked lists
+class Solution {
+public:
+    int count_of_nodes(Node* head){
+    int count=0;
+    while(head){
+        count++; 
+        head=head->next;
+    }
+    return count;
+}
+
+  //Function to find intersection point in Y shaped Linked Lists.
+  int intersectPoint(Node* head1, Node* head2)
+  {
+      // Your Code Here
+      int c1 = count_of_nodes(head1);
+      int c2 = count_of_nodes(head2);
+      int d;
+      if(c1>c2){
+          d=c1-c2;
+          for(int i=0; i<d; i++){
+              head1=head1->next;
+          }
+      }
+      else if(c2>c1){
+          d=c2-c1;
+          for(int i=0; i<d; i++){
+              head2=head2->next;
+          }
+      }
+      while(head1!=NULL && head2!=NULL && head1!=head2){
+          head1=head1->next;
+          head2=head2->next;
+      }
+      return head1->data;
+    }
+  }
+};
