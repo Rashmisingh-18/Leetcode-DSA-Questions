@@ -20,3 +20,23 @@ public:
         return false;
     }
 };
+
+// Code to remove the loop
+class Solution {
+public:
+    bool removeCycle(ListNode *head) {
+        ListNode* slow = head;
+        ListNode* fast = head;
+        do{
+            slow = slow->next;
+            fast = fast->next->next;
+        }while(slow!=fast);
+      
+        fast = head;
+        while(fast!=NULL && fast->next!=NULL){
+          slow = slow->next;
+          fast = fast->next;  
+        }
+        slow->next=NULL;
+    }
+};
