@@ -34,7 +34,8 @@
 11. Add Two Numbers in Linked List
 12. Add Two Numbers in Linked List - (ii)
 13. Flattening of a linked list
-13. Reorder-List
-14. Delete nth node from end of linked list
-15. Segregate Odd Even Linked List
+14. Reorder-List
+15. Remove the given Linked Lists element
+16. Delete nth node from end of linked list
+17. Segregate Odd Even Linked List
 
