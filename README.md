@@ -37,5 +37,6 @@
 14. Reorder-List
 15. Remove the given Linked Lists element
 16. Delete nth node from end of linked list
-17. Segregate Odd Even Linked List
+17. Clone a linked list with next and random pointer in O(1) space
+18. Segregate Odd Even Linked List
 
