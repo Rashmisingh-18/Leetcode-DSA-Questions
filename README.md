@@ -40,3 +40,7 @@
 17. Clone a linked list with next and random pointer in O(1) space
 18. Segregate Odd Even Linked List
 
+ **Stack**
+1. Implement Stack using array
+2. Implement stack using linked lists
+3. Next Greater Element
