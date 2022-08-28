@@ -48,3 +48,4 @@
 5. Next Smaller Element to left
 6. Next Smaller Element to right
 7. Stock Span Problem
+8. Maximum Area Histogram
