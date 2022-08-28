@@ -43,4 +43,8 @@
  **Stack**
 1. Implement Stack using array
 2. Implement stack using linked lists
-3. Next Greater Element
+3. Next Greater Element to left
+4. Next Greater Element to right
+5. Next Smaller Element to left
+6. Next Smaller Element to right
+7. Stock Span Problem
