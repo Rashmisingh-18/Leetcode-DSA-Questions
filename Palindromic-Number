@@ -1,0 +1,38 @@
+Approach Used: find the last and first digit of the given number, then check if the they are equal or not. Then chop-off them and check for another one similarly.
+
+For example, let's take x = 1221
+so, first to find the left most digit we have to do, 1221/1000 = 1, so for other examples basically we have to find that divisor, to find that,
+
+								int div=1; 
+								while(x >= 10*div)
+									div*=10;
+Henceleft = x/div , right = x%10;
+then check if right and left are equal, if not then return false
+then after chopping leftmost and rightmost digits, by using, x =(x % div)/10 ,update the div for next values,
+
+
+class solution{
+public:
+     bool isPalindrome(int x) {
+     long int div = 1;
+       if(x < 0)
+       return false;
+
+      // finding the divisor
+       while(x >= div*10)
+       div*=10;
+
+     // checking for palindrome
+       while(x > 0){  
+          int right = x%10;              // rightmost number
+          int left = x/div;              // leftmost number
+          if(left!=right)                         
+              return false;
+
+          x = (x%div)/10;           // chopping off the leftmost and rightmost number
+          div = div/100;  // updating the divisor, to check for the middle digits, if they exists
+      }
+      return true;
+  }
+};
+
